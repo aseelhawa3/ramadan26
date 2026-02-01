@@ -1,0 +1,401 @@
+<a href="index.html"
+   style="display:inline-block;margin:20px;background:#0ea5e9;color:white;
+   padding:10px 20px;border-radius:15px;font-weight:bold;text-decoration:none;">
+   ➜ الرجوع للصفحة الرئيسية
+</a>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة الطور الابتدائية - مسابقة رمضان 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lemon-light: #fefce8;
+            --lemon-soft: #fef9c3;
+            --lemon-accent: #fde047;
+            --red-pale: #fff1f2; 
+            --red-border: #fecaca;
+            --text-dark: #422006;
+        }
+        
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--lemon-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation Bar */
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #fef3c7;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 0.5rem;
+        }
+
+        .nav-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            padding: 0.6rem 0.2rem;
+            border-radius: 12px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .nav-container {
+                display: flex;
+                flex-direction: row;
+                max-width: none;
+                justify-content: center;
+                gap: 1rem;
+            }
+            .nav-link {
+                padding: 0.6rem 1.25rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        .nav-link:active { transform: scale(0.95); }
+
+        .creative-header {
+            background: linear-gradient(180deg, #fefce8 0%, #fef3c7 100%);
+            border-bottom: 4px dashed #fde68a;
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 10px 0px #fef3c7, 0 20px 40px -12px rgba(0,0,0,0.08);
+            border: 2px solid #fef3c7;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes moonSlide {
+            0%, 100% { transform: translate(0, 0) rotate(-10deg); }
+            50% { transform: translate(-10px, -5px) rotate(10deg); }
+        }
+        .moon-float { animation: moonSlide 6s ease-in-out infinite; }
+
+        .content-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+            opacity: 0;
+        }
+        .content-panel.open {
+            max-height: 5000px; 
+            opacity: 1;
+        }
+
+        .info-bubble {
+            background: white;
+            border-radius: 20px;
+            border: 3px solid #f1f5f9; 
+            margin-bottom: 1.25rem;
+            padding: 1.25rem;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            transition: all 0.3s ease;
+            text-align: right; /* المحاذاة لليمين */
+        }
+        
+        .religious-item { border-color: var(--red-border); background-color: var(--red-pale); }
+        .geo-item { border-color: #a7f3d0; background-color: #f0fdf4; }
+        .science-item { border-color: #bae6fd; background-color: #f0f9ff; }
+
+        .info-bubble:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px -3px rgba(0,0,0,0.05);
+        }
+
+        .emoji-tag {
+            background: white;
+            padding: 6px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 640px) {
+            .main-card { border-radius: 30px; padding: 1.5rem; }
+            h1 { font-size: 1.3rem !important; }
+            .info-bubble { font-size: 0.9rem; padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div onclick="scrollToSection('main-header')" class="nav-link bg-orange-100 text-orange-800">الصفحة الرئيسية</div>
+            <div onclick="scrollToSection('religious-box', 'box1')" class="nav-link bg-red-100 text-red-800">معلومات دينية</div>
+            <div onclick="scrollToSection('geo-box', 'box2')" class="nav-link bg-green-100 text-green-800">معلومات جغرافية</div>
+            <div onclick="scrollToSection('science-box', 'box3')" class="nav-link bg-blue-100 text-blue-800">معلومات علمية</div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="main-header" class="creative-header relative pt-8 pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="main-card p-6 md:p-10 text-center">
+                <div class="moon-float text-6xl mb-4 inline-block">🌙</div>
+                <h1 class="text-xl md:text-3xl font-black text-yellow-900 mb-4">
+                    مدرسة الطور الابتدائية للبنين ب
+                </h1>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="inline-block bg-yellow-50 text-yellow-900 px-8 py-3 rounded-full font-black text-xl md:text-2xl border-b-4 border-yellow-200 shadow-sm">
+                        مُسَابَقَةُ رَمَضَانَ ٢٠٢٦
+                    </div>
+                    <div class="text-green-700 font-extrabold text-sm md:text-base bg-green-50 px-5 py-2 rounded-xl border-2 border-dashed border-green-200">
+                        لِلصَّفَّيْنِ: الثَّالِث 🟢 الرَّابِع
+                    </div>
+                </div>
+                <p class="mt-6 text-orange-600 font-black text-lg animate-bounce">
+                    بطل اليوم.. عالم الغد! 🌟 جاهز للتحدي؟
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 md:px-6 -mt-8 relative z-30 pb-20 space-y-10">
+        
+        <!-- Welcome Message -->
+        <section>
+            <div class="bg-white rounded-[30px] p-6 md:p-8 text-center shadow-xl border-4 border-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-100 -mr-10 -mt-10 rounded-full opacity-50"></div>
+                <div class="absolute -top-5 -right-5 bg-yellow-200 w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">👋</div>
+                <h2 class="text-xl font-black text-yellow-800 mb-3">أهلاً بِكَ يا بطل مدرسة الطور</h2>
+                <p class="text-base md:text-lg text-slate-600 font-bold leading-relaxed">
+                    عَزيزي الطّالب، اِقْرَأْ هٰذِهِ الْمَعْلُومَاتِ بِتَرْكِيزٍ وَفَهْمٍ، نَحْنُ نَثِقُ بِذَكَائِكَ وَقُدُرَاتِكَ الرَّائِعَة! 🚀
+                </p>
+            </div>
+        </section>
+
+        <!-- Discovery Sections -->
+        <section class="space-y-6">
+            <h3 class="text-xl font-black text-slate-800 px-4 mb-2 flex items-center gap-2">
+                قَائِمَةُ الِاكْتِشَافَاتِ 🔎 
+            </h3>
+            
+            <!-- 1. Religious Section -->
+            <div id="religious-box" class="bg-white rounded-[30px] shadow-sm overflow-hidden border-2 border-red-100">
+                <button onclick="toggleBox('box1')" class="w-full p-6 flex items-center justify-between bg-red-50/50 hover:bg-red-100 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2833/2833314.png" class="w-8 h-8">
+                        <span class="text-lg font-black text-red-900">مَعْلُومَاتٌ دِينِيَّةٌ</span>
+                    </div>
+                    <span id="arrow-box1" class="text-red-400 text-xl transition-transform">▼</span>
+                </button>
+                <div id="box1" class="content-panel px-4 md:px-6">
+                    <div class="space-y-3 pt-6 pb-6 text-right">
+                        <div class="info-bubble religious-item">
+                            <span class="emoji-tag">🌙</span>
+                            <span>الصَّوْمُ فِي رَمَضَانَ فَرْضٌ عَلَيْنَا، لِيُعَلِّمَنَا الصَّبْرَ، وَيُقَوِّي التَّقْوَى وَيَجْعَلَنَا نُسَاعِدُ الْآخَرِينَ.</span>
+                        </div>
+                        <div class="info-bubble religious-item">
+                            <span class="emoji-tag">📖</span>
+                            <span>الْقُرْآنُ الْكَرِيمُ نَزَلَ عَلَى النَّبِيِّ مُحَمَّدٍ ﷺ تَدْرِيجِيًّا عَلَى مَدَى ٢٣ سَنَةً، لِيَتَمَكَّنَ مِنْ تَعْلِيمِ النَّاسِ أُمُور دينِهِم تَدْرِيجِيًّا.</span>
+                        </div>
+                        <div class="info-bubble religious-item">
+                            <span class="emoji-tag">🕌</span>
+                            <span>جُمِعَ الْقُرْآنُ بَعْدَ وَفَاةِ النَّبِيِّ ﷺ فِي مُصْحَفٍ وَاحِدٍ بِجُهْدِ الصَّحَابَةِ، وَرَتَّبُوا السُّوَرَ وَالْآيَاتِ لِيُصْبِحَ الْقُرْآنُ مُنَظَّمًا.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Geography Section -->
+            <div id="geo-box" class="bg-white rounded-[30px] shadow-sm overflow-hidden border-2 border-green-100">
+                <button onclick="toggleBox('box2')" class="w-full p-6 flex items-center justify-between bg-green-50/50 hover:bg-green-100 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/854/854927.png" class="w-8 h-8">
+                        <span class="text-lg font-black text-green-900">مَعْلُومَاتٌ جُغْرَافِيَّةٌ</span>
+                    </div>
+                    <span id="arrow-box2" class="text-green-400 text-xl transition-transform">▼</span>
+                </button>
+                <div id="box2" class="content-panel px-4 md:px-6">
+                    <div class="space-y-3 pt-6 pb-6 text-right">
+                        <div class="info-bubble geo-item">
+                            <span class="emoji-tag">🌍</span>
+                            <span>اللَّيْلُ وَالنَّهَارُ يَخْتَلِفَانِ حَسَبَ مَكَانِ الْأَرْضِ، فَمَثَلًا فِي الْقُطْبِ الشَّمَالِيِّ يَسْتَمِرُّ النَّهَارُ أَوِ اللَّيْلُ لِأَشْهُرٍ مُتَتَالِيَةٍ.</span>
+                        </div>
+                        <div class="info-bubble geo-item">
+                            <span class="emoji-tag">🧭</span>
+                            <span>الْإِبْرَةُ الْمَغْنَاطِيسِيَّةُ فِي الْبُوصَلَةِ تَدُورُ لِتُشِيرَ إِلَى الشَّمَالِ، لِذَلِكَ يَسْتَطِيعُ النَّاسُ تَحْدِيدَ الِاتِّجَاهَاتِ بِسُهُولَةٍ.</span>
+                        </div>
+                        <div class="info-bubble geo-item">
+                            <span class="emoji-tag">🗺️</span>
+                            <span>الْوَطَنُ الْعَرَبِيُّ يَضُمُّ ٢٢ دَوْلَةً، مِنْهَا ١٣ دَوْلَةً فِي قَارَّةِ آسِيَا مِثْلَ السُّعُودِيَّةِ وَالْعِرَاقِ وَالْأُرْدُنِّ، وَ٩ دُوَلٍ فِي قَارَّةِ إِفْرِيقِيَا مِثْلَ مِصْرَ وَالْمَغْرِبِ وَالْجَزَائِرِ.</span>
+                        </div>
+                        <div class="info-bubble geo-item">
+                            <span class="emoji-tag">🌍</span>
+                            <span>الْعَالَمُ مُكَوَّنٌ مِنْ سَبْعِ قَارَّاتٍ: آسِيَا، إِفْرِيقِيَا، أُورُوبَّا، أَمْرِيكَا الشِّمَالِيَّةِ، أَمْرِيكَا الْجَنُوبِيَّةِ، أُسْتُرَالِيَا، وَأَنْتَارْكْتِيكَا. كُلُّ قَارَّةٍ كَبِيرَةٌ وَتَضُمُّ دُوَلًا كَثِيرَةً وَحَيَوَانَاتٍ وَنَبَاتَاتٍ مُخْتَلِفَةً.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Science Section -->
+            <div id="science-box" class="bg-white rounded-[30px] shadow-sm overflow-hidden border-2 border-blue-100">
+                <button onclick="toggleBox('box3')" class="w-full p-6 flex items-center justify-between bg-blue-50/50 hover:bg-blue-100 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1085/1085183.png" class="w-8 h-8">
+                        <span class="text-lg font-black text-blue-900">مَعْلُومَاتٌ عِلْمِيَّةٌ</span>
+                    </div>
+                    <span id="arrow-box3" class="text-blue-400 text-xl transition-transform">▼</span>
+                </button>
+                <div id="box3" class="content-panel px-4 md:px-6">
+                    <div class="space-y-3 pt-6 pb-6 text-right">
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">🧠</span>
+                            <span>عِنْدَمَا نَتَعَلَّمُ شَيْئًا جَدِيدًا، الدِّمَاغُ يُشَكِّلُ وَصَلَاتٍ جَدِيدَةً بَيْنَ الْخَلَايَا، وَهٰذَا يَجْعَلُنَا نَفْهَمُ أَسْرَعَ.</span>
+                        </div>
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">🦴</span>
+                            <span>الْعِظَامُ قَوِيَّةٌ لِأَنَّهَا تَحْتَوِي عَلَى الْكَالْسِيُومِ وَالْمَعَادِنِ، وَتَدْعَمُ الْجِسْمَ أَثْنَاءَ الْحَرَكَةِ وَاللَّعِبِ.</span>
+                        </div>
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">❤️</span>
+                            <span>الْقَلْبُ عَضَلَةٌ لَا إِرَادِيَّةٌ، تَضُخُّ الدَّمَ فِي جَمِيعِ الْجِسْمِ بِاسْتِمْرَارٍ دُونَ الْحَاجَةِ لِلتَّفْكِيرِ.</span>
+                        </div>
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">🌱</span>
+                            <span>النَّبَاتَاتُ تَعْتَمِدُ عَلَى الْحَشَرَاتِ لِتَلْقِيحِ الْأَزْهَارِ، وَإِذَا قَلَّتِ النَّبَاتَاتُ تَقِلُّ كَمِّيَّةُ الْأُكْسُجِينِ وَالطَّعَامِ لِكُلِّ الْكَائِنَاتِ.</span>
+                        </div>
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">🏃</span>
+                            <span>الْمَشْيُ يُعْتَبَرُ رِيَاضَةً بَسِيطَةً، يُقَوِّي الْعَضَلَاتِ وَالْعِظَامَ وَيُحَافِظُ عَلَى صِحَّةِ الْقَلْبِ، وَمِنَ الْجَيِّدِ الْمَشْيُ حَوَالَيْ ٢٠–٣٠ دَقِيقَةً يَوْمِيًّا.</span>
+                        </div>
+                        
+                        <!-- Brain Detailed -->
+                        <div class="info-bubble science-item flex-col !items-stretch">
+                            <div class="flex items-center gap-3 mb-3 border-b border-blue-100 pb-2">
+                                <span class="emoji-tag !shadow-none !p-0">🧠</span>
+                                <h4 class="font-black text-blue-900">الدِّمَاغُ مُقَسَّمٌ إِلَى أَجْزَاءٍ:</h4>
+                            </div>
+                            <div class="space-y-2 pr-2">
+                                <p>• الْمُخُّ لِلتَّفْكِيرِ وَاتِّخَاذِ الْقَرَارَاتِ.</p>
+                                <p>• الْمُخَيَّخُ لِمُسَاعَدَتِنَا عَلَى الْمَشْيِ وَالتَّوَازُنِ.</p>
+                                <p>• وَجُزْءٌ فِي الْأَسْفَلِ يَتَحَكَّمُ فِي التَّنَفُّسِ وَضَرَبَاتِ الْقَلْبِ.</p>
+                                <p class="text-center font-black pt-2">كُلُّ جُزْءٍ مُهِمٌّ.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">💧</span>
+                            <span>فِي الزِّرَاعَةِ الْمَائِيَّةِ، النَّبَاتَاتُ تَنْـمُو فِي الْمَاءِ الَّذِي يَحْتَوِي عَلَى جَمِيعِ الْعَنَاصِرِ الَّتِي تَحْتَاجُهَا لِلنُّمُوِّ، دُونَ الْحَاجَةِ لِلتُّرْبَةِ.</span>
+                        </div>
+                        <div class="info-bubble science-item">
+                            <span class="emoji-tag">🐢</span>
+                            <span>السُّلَحْفَاةُ تَتَحَرَّكُ بِبُطْءٍ، وَلَهَا صَدَفَةٌ قَوِيَّةٌ تَحْمِي جِسْمَهَا مِنَ الْأَعْدَاءِ، وَيُمْكِنُهَا الْعَيْشُ عَلَى الْيَابِسَةِ وَفِي الْمَاءِ.</span>
+                        </div>
+
+                        <!-- Seeds Detailed -->
+                        <div class="info-bubble science-item flex-col !items-stretch">
+                            <div class="flex items-center gap-3 mb-3 border-b border-blue-100 pb-2">
+                                <span class="emoji-tag !shadow-none !p-0">🌻</span>
+                                <h4 class="font-black text-blue-900">عَالَمُ الْبُذُورِ:</h4>
+                            </div>
+                            <div class="space-y-4 pr-2">
+                                <p>• الْبُذُورُ أَنْوَاعٌ كَثِيرَةٌ، مِثْلَ بُذُورِ الْخُضَارِ وَالْفَوَاكِهِ، ولكي تَنْـمُوَ البذور فإنّها تَحْتَاجُ إِلَى الْمَاءِ وَالتُّتُرْبَةِ الْجَيِّدَةِ وَالشَّمْسِ.</p>
+                                <p class="bg-white/50 p-3 rounded-xl text-center border border-blue-100">بَعْضُ الْبُذُورِ تَنْبُتُ بِسُرْعَةٍ، وَبَعْضُهَا يَحْتَاجُ وَقْتًا أَطْوَلَ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Footer -->
+        <footer class="text-center pt-10">
+            <div class="bg-yellow-50 p-10 rounded-[40px] border-2 border-yellow-100 relative overflow-hidden shadow-inner">
+                <img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" class="w-14 h-14 mx-auto mb-4">
+                <h2 class="text-2xl font-black text-yellow-900 mb-2">أَنتَ مُبْدِعٌ يَا بَطَل!</h2>
+                <p class="text-yellow-800 font-bold mb-6 italic">"لا يوجد مستحيل أمام الإرادة القوية والتركيز الذكي"</p>
+                <div class="inline-block bg-white px-6 py-2 rounded-full shadow-sm text-yellow-600 font-black text-sm border border-yellow-200">
+                    نراكم في المسابقة.. بالتوفيق للجميع! 🏁
+                </div>
+                <p class="mt-8 text-yellow-700/60 font-bold text-xs">مدرسة الطور الابتدائية ب | ٢٠٢٦</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        function toggleBox(id, forceOpen = false) {
+            const panel = document.getElementById(id);
+            const arrow = document.getElementById('arrow-' + id);
+            
+            if (forceOpen) {
+                document.querySelectorAll('.content-panel').forEach(p => {
+                    if(p.id !== id) {
+                        p.classList.remove('open');
+                        const otherArrow = document.getElementById('arrow-' + p.id);
+                        if(otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+                    }
+                });
+                panel.classList.add('open');
+                arrow.style.transform = 'rotate(180deg)';
+                return;
+            }
+
+            if (panel.classList.contains('open')) {
+                panel.classList.remove('open');
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                panel.classList.add('open');
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function scrollToSection(sectionId, panelId = null) {
+            if (panelId) {
+                toggleBox(panelId, true);
+            }
+            
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                const yOffset = -120;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<a href="index.html"
+   style="display:inline-block;margin:20px;background:#0ea5e9;color:white;
+   padding:10px 20px;border-radius:15px;font-weight:bold;text-decoration:none;">
+   ➜ الرجوع للصفحة الرئيسية
+</a>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة رمضان 2026 - مدرسة الطور الابتدائية للبنين ب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f0f9ff;
+            color: #334155;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .step-card {
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+        .info-card-icon {
+            font-size: 1.75rem;
+            z-index: 10;
+        }
+        .info-card-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #1e293b;
+            font-weight: 500;
+            z-index: 10;
+        }
+        .info-card-bg {
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            font-size: 4rem;
+            opacity: 0.05;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+        .motivational-box {
+            background: #fef9c3;
+            border-right: 5px solid #facc15;
+            border-radius: 15px;
+        }
+        .nav-link {
+            transition: all 0.2s;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        @media (min-width: 768px) {
+            .nav-grid {
+                display: flex;
+                flex-direction: row;
+            }
+            .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-sky-50">
+
+    <!-- Navbar optimized for Mobile -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md py-3 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col items-center gap-3">
+            <div class="flex items-center gap-2 shrink-0 border-b border-sky-100 pb-2 w-full justify-center">
+                <span class="text-xl">🌙</span>
+                <span class="font-bold text-sky-800 text-sm md:text-base text-center">مَدْرَسَةُ الطُّورِ الِابْتِدَائِيَّةُ لِلْبَنِينَ ب</span>
+            </div>
+            
+            <div class="nav-grid w-full">
+                <a href="#about" class="nav-link bg-sky-100 text-sky-800 px-3 py-2 rounded-xl text-center">مدرستنا</a>
+                <a href="#religious" class="nav-link bg-orange-100 text-orange-800 px-3 py-2 rounded-xl text-center">معلومات دينية</a>
+                <a href="#geo" class="nav-link bg-green-100 text-green-800 px-3 py-2 rounded-xl text-center">معلومات جغرافية</a>
+                <a href="#nature" class="nav-link bg-purple-100 text-purple-800 px-3 py-2 rounded-xl text-center">معلومات علمية</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Hero Section -->
+    <header class="bg-gradient-to-b from-sky-200 to-sky-50 pt-10 pb-8 px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-bold text-sky-800 mb-2">أهلاً بِكُمْ يَا أَبْطَال!</h1>
+            <p class="text-lg text-sky-600 mb-2 font-medium">مُسَابَقَةُ رَمَضَانَ ٢٠٢٦</p>
+            <p class="text-sm text-sky-500 font-bold mb-6">لِلصَّفَّيْنِ الْأَوَّلِ وَالثَّانِي</p>
+            
+            <div class="relative inline-block mt-2">
+                <div class="absolute -top-6 -right-6 text-4xl animate-bounce">⭐</div>
+                <div class="bg-white p-5 rounded-3xl shadow-lg border-2 border-sky-300">
+                    <p class="text-blue-900 leading-relaxed font-bold text-sm md:text-base">
+                        "عَزيزي الطّالب، اِقْرَأْ هٰذِهِ الْمَعْلُومَاتِ بِتَرْكِيزٍ وَفَهْمٍ.. نَحْنُ نَثِقُ بِذَكَائِكَ!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+
+        <!-- Stage: School Identity -->
+        <section id="about" class="mb-16 scroll-mt-32">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-sky-800">🏫 مَنْ نَحْنُ؟</h2>
+            </div>
+            <div class="bg-white step-card p-6 shadow-sm border-2 border-blue-100">
+                <p class="text-lg leading-loose text-gray-700">
+                    مَدْرَسَتُنا الطُّورُ الِابْتِدَائِيَّةُ لِلْبَنِينَ ب، 
+                    <span class="bg-yellow-100 px-2 font-bold">تَأَسَّسَتْ عَامَ ٢٠٠١</span>، 
+                    وَتَسْعَى إِلَى بِنَاءِ مُجْتَمَعٍ حَضَارِيٍّ يَسْتَمِدُّ قُوَّتَهُ مِنَ الْعَقِيدَةِ السَّمَاوِيَّةِ.
+                </p>
+                <div class="mt-6 flex flex-col md:flex-row gap-4 items-center bg-green-50 p-4 rounded-2xl border border-green-100">
+                    <div class="text-4xl">🌳</div>
+                    <p class="text-green-800 font-medium">
+                        وَتَتَمَيَّزُ مَدْرَسَتُنا بِلَوْنِهَا الْأَخْضَرِ، وَأَشْجَارِهَا الْيَافِعَةِ، كَمَا تَهْتَمُّ بِالْبَرْنَامَجِ الْغِذَائِيِّ الصِّحِّيِّ، وَتُعَزِّزُ رُوحَ الرِّفْقِ بِالْحَيَوانِ.
+                    </p>
+                </div>
+                <div class="motivational-box p-4 mt-6 text-center">
+                    <p class="text-yellow-800 font-bold">💡 "مدرستنا خضراء وصحية.. كن جزءاً من هذا الجمال!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Religious Info -->
+        <section id="religious" class="mb-16 scroll-mt-32">
+            <div class="flex flex-col items-center mb-6">
+                <div class="bg-orange-500 text-white px-6 py-2 rounded-full font-bold mb-2 shadow-lg">الْمَرْحَلَةُ الْأُولَى</div>
+                <h2 class="text-2xl font-bold text-orange-800">✨ مَعْلُومَاتٌ دِينِيَّةٌ</h2>
+            </div>
+            <div class="grid gap-6">
+                <div class="info-card border-r-8 border-r-orange-400">
+                    <span class="info-card-icon">🕌</span>
+                    <p class="info-card-text">نَحْنُ نَصُومُ فِي رَمَضَانَ لِأَنَّ اللَّهَ أَمَرَنَا بِذَلِكَ، فَالصِّيَامُ مِنْ أَرْكَانِ الْإِسْلَامِ، وَأَمَرَنَا اللَّهُ بِهِ لِنُعَوِّدَ أَنْفُسَنَا عَلَى الصَّبْرِ.</p>
+                </div>
+                <div class="info-card border-r-8 border-r-orange-400">
+                    <span class="info-card-icon">📖</span>
+                    <p class="info-card-text">الْقُرْآنُ نَزَلَ عَلَى النَّبِيِّ مُحَمَّدٍ ﷺ مِنَ اللَّهِ سُبْحَانَهُ وَتَعَالَى بِوَاسِطَةِ الْوَحْيِ جِبْرِيلَ مُفَرَّقًا في ٢٣ سَنَةً.</p>
+                </div>
+                <div class="info-card border-r-8 border-r-orange-400">
+                    <span class="info-card-icon">🗂️</span>
+                    <p class="info-card-text">بَعْدَ وَفَاةِ النَّبِيِّ ﷺ جَمَعَ الصَّحَابَةُ الْقُرْآنَ فِي مُصْحَفٍ وَاحِدٍ لِيَبْقَى مَحْفُوظًا.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Geography Info -->
+        <section id="geo" class="mb-16 scroll-mt-32">
+            <div class="flex flex-col items-center mb-6">
+                <div class="bg-green-600 text-white px-6 py-2 rounded-full font-bold mb-2 shadow-lg">الْمَرْحَلَةُ الثَّانِيَةُ</div>
+                <h2 class="text-2xl font-bold text-green-800">🌍 مَعْلُومَاتٌ جُغْرَافِيَّةٌ</h2>
+            </div>
+            <div class="grid gap-4">
+                <div class="info-card border-r-8 border-r-indigo-400">
+                    <span class="info-card-icon">🌗</span>
+                    <p class="info-card-text">فِي بَعْضِ الْأَمَاكِنِ يَكُونُ اللَّيْلُ طَوِيلًا جِدًّا وَفِي أَمَاكِنَ أُخْرَى قَصِيرًا.</p>
+                    <div class="info-card-bg">🌗</div>
+                </div>
+                <div class="info-card border-r-8 border-r-yellow-400">
+                    <span class="info-card-icon">🧭</span>
+                    <p class="info-card-text">الْبُوصَلَةُ تَحْتَوِي عَلَى إِبْرَةٍ تُشِيرُ دَائِمًا إِلَى الشَّمَالِ لِتَعْرِفَ الِاتِّجَاهَاتِ.</p>
+                    <div class="info-card-bg">🧭</div>
+                </div>
+                <div class="info-card border-r-8 border-r-green-400">
+                    <span class="info-card-icon">🚩</span>
+                    <p class="info-card-text">الْوَطَنُ الْعَرَبِيُّ يَضُمُّ ٢٢ دَوْلَةً. بَعْضُ هَذِهِ الدُّوَلِ فِي آسِيَا وَبَعْضُهَا فِي إِفْرِيقِيَا.</p>
+                    <div class="info-card-bg">🚩</div>
+                </div>
+                <div class="info-card border-r-8 border-r-blue-400">
+                    <span class="info-card-icon">🌍</span>
+                    <p class="info-card-text">الْعَالَمُ فِيهِ سَبْعُ قَارَّاتٍ: آسِيَا، إِفْرِيقِيَا، أُورُوبَّا، أَمْرِيكَا الشِّمَالِيَّةِ، أَمْرِيكَا الْجَنُوبِيَّةِ، أُسْتُرَالِيَا، وَأَنْتَارْكْتِيكَا.</p>
+                    <div class="info-card-bg">🌍</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Scientific Info -->
+        <section id="nature" class="mb-16 scroll-mt-32">
+            <div class="flex flex-col items-center mb-6">
+                <div class="bg-purple-600 text-white px-6 py-2 rounded-full font-bold mb-2 shadow-lg">الْمَرْحَلَةُ الثَّالثَةُ</div>
+                <h2 class="text-2xl font-bold text-purple-800">✨ مَعْلُومَاتٌ عِلْمِيَّةٌ</h2>
+            </div>
+            <div class="grid gap-4">
+                <div class="info-card border-r-8 border-r-purple-400">
+                    <span class="info-card-icon">🧠</span>
+                    <p class="info-card-text">الدِّمَاغُ يَعْمَلُ بِسُرْعَةٍ أَكْبَرَ عِنْدَمَا نَتَعَلَّمُ شَيْئًا جَدِيدًا.</p>
+                    <div class="info-card-bg">🧠</div>
+                </div>
+                <div class="info-card border-r-8 border-r-red-400">
+                    <span class="info-card-icon">🦴</span>
+                    <p class="info-card-text">الْعِظَامُ قَوِيَّةٌ جِدًّا لِأَنَّهَا تَدْعَمُ وَزْنَ الْجِسْمِ.</p>
+                    <div class="info-card-bg">🦴</div>
+                </div>
+                <div class="info-card border-r-8 border-r-pink-400">
+                    <span class="info-card-icon">❤️</span>
+                    <p class="info-card-text">الْقَلْبُ يَضُخُّ الدَّمَ تِلْقَائِيًّا دُونَ أَنْ نُفَكِّرَ فِيهِ.</p>
+                    <div class="info-card-bg">❤️</div>
+                </div>
+                <div class="info-card border-r-8 border-r-emerald-400">
+                    <span class="info-card-icon">🦟</span>
+                    <p class="info-card-text">بَعْضُ الْحَشَرَاتِ تُسَاعِدُ النَّبَاتَاتِ عَلَى التَّكَاثُرِ، وَإِذَا اخْتَفَتِ النَّبَاتَاتُ تَتَأَثَّرُ كُلُّ الْحَيَاةِ عَلَى الْأَرْضِ.</p>
+                    <div class="info-card-bg">🦟</div>
+                </div>
+                <div class="info-card border-r-8 border-r-orange-400">
+                    <span class="info-card-icon">🏃‍♂️</span>
+                    <p class="info-card-text">الْمَشْيُ نَوْعٌ مِنَ الرِّيَاضَةِ، يَجْعَلُ جِسْمَنَا قَوِيًّا وَصِحِّيًّا، وَنَسْتَمْتِعُ بِهِ كُلَّ يَوْمٍ قَلِيلًا.</p>
+                    <div class="info-card-bg">🏃‍♂️</div>
+                </div>
+                <div class="info-card border-r-8 border-r-cyan-400">
+                    <span class="info-card-icon">🔬</span>
+                    <p class="info-card-text">الدِّمَاغُ يُسَاعِدُنَا عَلَى التَّفْكِيرِ وَالتَّحَرُّكِ. فِيهِ أَجْزَاءٌ تُسَاعِدُنَا عَلَى أَشْيَاءَ مُخْتَلِفَةٍ: جُزْءٌ لِلتَّفْكِيرِ، وَجُزْءٌ لِلْحَرَكَةِ، وَجُزْءٌ يَتَحَكَّمُ فِي التَّنَفُّسِ وَالْقَلْبِ.</p>
+                    <div class="info-card-bg">🔬</div>
+                </div>
+                <div class="info-card border-r-8 border-r-teal-400">
+                    <span class="info-card-icon">💧</span>
+                    <p class="info-card-text">الزِّرَاعَةُ الْمَائِيَّةُ طَرِيقَةٌ لِزِرَاعَةِ النَّبَاتَاتِ بِدُونِ تُرَابٍ، فَقَطْ بِالْمَاءِ وَالْعَنَاصِرِ الْغِذَائِيَّةِ.</p>
+                    <div class="info-card-bg">💧</div>
+                </div>
+                <div class="info-card border-r-8 border-r-amber-600">
+                    <span class="info-card-icon">🐢</span>
+                    <p class="info-card-text">السُّلَحْفَاةُ حَيَوَانٌ بَطِيءُ الْحَرَكَةِ وَلَهَا صَدَفَةٌ تَحْمِي جِسْمَهَا.</p>
+                    <div class="info-card-bg">🐢</div>
+                </div>
+                <div class="info-card border-r-8 border-r-lime-500">
+                    <span class="info-card-icon">🌱</span>
+                    <p class="info-card-text">الْبُذُورُ هِيَ جُزْءٌ مِنَ النَّبَاتِ يُمْكِنُ أَنْ يَنْمُوَ لِيُصْبِحَ نَبَاتًا جَدِيدًا. تَحْتَاجُ الْبُذُورُ إِلَى الْمَاءِ وَالْهَوَاءِ وَالشَّمْسِ لِتَنْبُتَ.</p>
+                    <div class="info-card-bg">🌱</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Final Footer Section -->
+    <footer class="bg-sky-700 text-white py-12 px-6 text-center rounded-t-[50px] shadow-inner mt-10">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-6xl mb-4">🏆</div>
+            <h2 class="text-xl md:text-3xl font-bold mb-2">مَدْرَسَةُ الطُّورِ الِابْتِدائِيَّةُ لِلْبَنينِ ب</h2>
+            <h3 class="text-lg md:text-2xl text-sky-200 font-bold mb-6">مُسَابَقَةُ رَمَضَانَ ٢٠٢٦</h3>
+            
+            <p class="text-sky-100 text-base mb-8 leading-relaxed max-w-xl mx-auto">
+                لَقَدْ قَرَأْتَ كُلَّ الْمَعْلُومَاتِ بِبَرَاعَةٍ. نَحْنُ نَفْتَخِرُ بِكَ يَا بَطَل!
+            </p>
+            
+            <div class="bg-sky-600/50 p-4 rounded-2xl inline-block mb-6 border border-sky-400">
+                <p class="text-xs font-bold">تَأَسَّسَتْ مَدْرَسَتُنا عَامَ ٢٠٠١ - نَحْوَ مُسْتَقْبَلٍ أَفْضَل</p>
+            </div>
+            
+            <div class="flex justify-center gap-6 mt-4">
+                <div class="bg-white/20 p-3 rounded-full">🌙</div>
+                <div class="bg-white/20 p-3 rounded-full">🌳</div>
+                <div class="bg-white/20 p-3 rounded-full">🍎</div>
+            </div>
+            <p class="mt-8 text-[10px] text-sky-300">© جميع الحقوق محفوظة لمدرسة الطور 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Button for Quick Scroll -->
+    <a href="#" class="fixed bottom-4 left-4 bg-sky-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-2xl z-50 border-2 border-white">
+        ↑
+    </a>
+
+</body>
+</html>

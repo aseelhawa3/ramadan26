@@ -1,0 +1,355 @@
+<a href="index.html"
+   style="display:inline-block;margin:20px;background:#0ea5e9;color:white;
+   padding:10px 20px;border-radius:15px;font-weight:bold;text-decoration:none;">
+   ➜ الرجوع للصفحة الرئيسية
+</a>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مسابقة رمضان 2026 - مدرسة الطور</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7f9f7; 
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .main-header {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            border-bottom: 6px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .school-card {
+            background: white;
+            border-radius: 40px;
+            border: 3px solid #ff8b94; 
+            box-shadow: 0 15px 30px -10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .feature-item {
+            background: #ffffff;
+            border: 2px solid #a8e6cf;
+            border-radius: 20px;
+            padding: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+        }
+        .info-box-btn {
+            border-radius: 35px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+        }
+        .page-content {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+        .page-active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .info-rect-card {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 16px; 
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            width: 100%;
+        }
+        @media (max-width: 640px) {
+            .info-rect-card {
+                padding: 12px;
+                gap: 10px;
+            }
+            .page-container {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+            .content-box {
+                padding: 15px !important;
+                border-radius: 25px !important;
+            }
+        }
+        .info-number {
+            background: #f1f5f9;
+            color: #475569;
+            min-width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+            flex: 1;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="pb-12">
+
+    <!-- الصفحة الرئيسية -->
+    <div id="home-page" class="page-content page-active">
+        <header class="main-header py-10 px-6 text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="flex justify-center mb-3">
+                    <svg class="w-10 h-10 text-orange-400 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3c.132 0 .263 0 .393.007a9 9 0 0 0 7.315 13.064 9 9 0 1 1-7.708-13.071z"/>
+                    </svg>
+                </div>
+                <div class="bg-white/50 inline-block px-4 py-1 rounded-full backdrop-blur-sm mb-3 border border-white">
+                    <h2 class="text-xs md:text-sm font-bold text-emerald-800 tracking-wide">مدرسة الطور الابتدائية للبنين ب</h2>
+                </div>
+                <h1 class="text-2xl md:text-4xl font-black mb-2 text-emerald-900 tracking-tight">معلومات مسابقة رمضان 2026</h1>
+                <div class="bg-orange-100 text-orange-700 inline-block px-4 py-1 rounded-full text-sm md:text-base font-bold mb-5 border border-orange-200">
+                    للصفين الخامس والسادس 📚
+                </div>
+                <p class="text-emerald-800/70 text-base md:text-lg font-semibold italic max-w-xl mx-auto leading-relaxed border-t border-emerald-200/50 pt-3">
+                    "نحو بناء مجتمع حضاري يرتقي بالعقيدة الإسلامية والقيم السماوية"
+                </p>
+            </div>
+            <div class="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full -mr-16 -mt-16"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-orange-200/20 rounded-full -ml-12 -mb-12"></div>
+        </header>
+
+        <main class="max-w-5xl mx-auto px-4 md:px-6 mt-10">
+            <!-- الهوية التربوية -->
+            <section class="school-card mb-10">
+                <div class="bg-emerald-500 p-4 text-white flex items-center gap-3">
+                    <span class="text-2xl">📜</span>
+                    <h3 class="text-lg font-bold">هويتنا التربوية</h3>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="grid md:grid-cols-3 gap-6 items-center">
+                        <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-[35px] border-2 border-orange-100">
+                            <div class="text-5xl mb-3">🏠</div>
+                            <span class="block text-orange-700 font-black text-lg">بيتنا الثاني</span>
+                            <span class="block text-gray-500 text-[10px] font-bold tracking-widest">تأسست عام 2001</span>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="text-lg md:text-xl leading-loose text-gray-700 font-bold text-justify">
+                                مَدْرَسَتُنا الطُّورُ الِابْتِدَائِيَّةُ لِلْبَنِينَ ب، تَأَسَّسَتْ عَامَ ٢٠٠١، وَتَسْعَى إِلَى بِنَاءِ مُجْتَمَعٍ حَضَارِيٍّ يَسْتَمِدُّ قُوَّتَهُ مِنَ الْعَقِيدَةِ السَّمَاوِيَّةِ، وَالْقِيَمِ الْإِنْسَانِيَّةِ النَّبِيلةِ، في رُبى <span class="text-emerald-600 font-black">جبل الزيتون</span>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-10 pt-8 border-t border-gray-100">
+                        <div class="flex items-center gap-4 mb-6">
+                            <h4 class="text-emerald-800 font-bold text-sm uppercase tracking-widest">✨ نتميّز بـ</h4>
+                            <div class="h-px bg-emerald-100 flex-1"></div>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="feature-item"><span class="text-3xl">🌳</span><span class="font-bold text-xs text-emerald-800">بيئة خضراء</span></div>
+                            <div class="feature-item"><span class="text-3xl">🐾</span><span class="font-bold text-xs text-emerald-800">الرفق بالحيوان</span></div>
+                            <div class="feature-item"><span class="text-3xl">🥗</span><span class="font-bold text-xs text-emerald-800">غذاء صحي</span></div>
+                            <div class="feature-item"><span class="text-3xl">📚</span><span class="font-bold text-xs text-emerald-800">تميز علمي</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- المحطات -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div onclick="showPage('religion-page')" class="info-box-btn border-orange-100 group">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🕌</div>
+                    <h4 class="text-xl font-black text-orange-700 mb-2 leading-tight text-center">مَعْلُومَاتٌ<br>دِينِيَّةٌ</h4>
+                    <p class="text-orange-400 font-bold text-xs bg-orange-50 px-4 py-1 rounded-full">تزود بالتقوى ✨</p>
+                </div>
+                <div onclick="showPage('geo-page')" class="info-box-btn border-emerald-100 group">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🌍</div>
+                    <h4 class="text-xl font-black text-emerald-700 mb-2 leading-tight text-center">مَعْلُومَاتٌ<br>جُغْرَافِيَّةٌ</h4>
+                    <p class="text-emerald-400 font-bold text-xs bg-emerald-50 px-4 py-1 rounded-full">استكشف العالم 🗺️</p>
+                </div>
+                <div onclick="showPage('nature-page')" class="info-box-btn border-rose-100 group">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🔬</div>
+                    <h4 class="text-xl font-black text-rose-700 mb-2 leading-tight text-center">مَعْلُومَاتٌ<br>عِلْمِيَّةٌ</h4>
+                    <p class="text-rose-400 font-bold text-xs bg-rose-50 px-4 py-1 rounded-full">سبحان الخالق 🔭</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- القسم الديني -->
+    <div id="religion-page" class="page-content page-container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-[30px] shadow-lg overflow-hidden border-2 border-orange-200 content-box">
+            <div class="bg-orange-100 p-6 text-orange-800 text-center">
+                <div class="text-5xl mb-2">🕌</div>
+                <h2 class="text-xl font-black">مَعْلُومَاتٌ دِينِيَّةٌ</h2>
+            </div>
+            <div class="p-5 md:p-8">
+                <div class="info-rect-card">
+                    <div class="info-number">١</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">فِي رَمَضَانَ فَرِيضَةٌ عَلَى الْمُسْلِمِينَ، وَهُوَ تَدْرِيبٌ عَلَى الصَّبْرِ، وَزِيَادَةُ التَّقْوَى، وَالتَّفَكُّرِ فِي نِعَمِ اللَّهِ، وَيُعَلِّمُنَا أَيْضًا التَّضَامُنَ مَعَ الْفُقَرَاءِ وَالْمُحْتَاجِينَ.</p>
+                </div>
+                <div class="info-rect-card">
+                    <div class="info-number">٢</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">نَزَلَ عَلَى النَّبِيِّ مُحَمَّدٍ ﷺ مِنَ اللَّهِ عَلَى شَكْلِ آيَاتٍ مُتَفَرِّقَةٍ لِمُدَّةِ ٢٣ سَنَةً، لِسُهُولَةِ التَّعَلُّمِ وَالتَّذَكُّرِ، وَلِتَطْبِيقِ التَّعَالِيمِ خُطْوَةً خُطْوَةً، وَهُوَ دَلِيلٌ لِلْبَشَرِيَّةِ فِي حَيَاتِهِمُ الْيَوْمِيَّةِ وَالدِّينِيَّةِ.</p>
+                </div>
+                <div class="info-rect-card">
+                    <div class="info-number">٣</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">جَمَعُوا الْقُرْآنَ بَعْدَ وَفَاةِ النَّبِيِّ ﷺ فِي مُصْحَفٍ وَاحِدٍ، وَرَتَّبُوا السُّوَرَ وَالْآيَاتِ عَلَى طَرِيقَةِ النَّبِيِّ، لِيَظَلَّ مَحْفُوظًا بِدِقَّةٍ، وَيَسْتَطِيعَ الْمُسْلِمُونَ قِرَاءَتَهُ وَتَعَلُّمَهُ بِسُهُولَةٍ.</p>
+                </div>
+                <div class="flex flex-row justify-between pt-6 gap-2">
+                    <button onclick="showPage('home-page')" class="flex-1 bg-gray-100 text-gray-600 py-3 rounded-xl font-bold text-sm">🏠 الرئيسية</button>
+                    <button onclick="showPage('geo-page')" class="flex-1 bg-orange-400 text-white py-3 rounded-xl font-bold shadow-md text-sm">التالي ⬅️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- القسم الجغرافي -->
+    <div id="geo-page" class="page-content page-container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-[30px] shadow-lg overflow-hidden border-2 border-emerald-200 content-box">
+            <div class="bg-emerald-100 p-6 text-emerald-800 text-center">
+                <div class="text-5xl mb-2">🌍</div>
+                <h2 class="text-xl font-black">مَعْلُومَاتٌ جُغْرَافِيَّةٌ</h2>
+            </div>
+            <div class="p-5 md:p-8">
+                <div class="info-rect-card">
+                    <div class="info-number">١</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">يَخْتَلِفَانِ حَسَبَ خَطِّ الْعَرْضِ، فَفِي الْقُطْبِ الشَّمَالِيِّ يَصِلُ النَّهَارُ إِلَى ٦ أَشْهُرٍ مُتَوَاصِلَةٍ، وَاللَّيْلُ أَيْضًا يَمْتَدُّ لِأَشْهُرٍ، بَيْنَمَا عِنْدَ خَطِّ الِاسْتِوَاءِ يَكُونُ اللَّيْلُ وَالنَّهَارُ مُتَسَاوِيَيْنِ تَقْرِيبًا طُولَ السَّنَةِ.</p>
+                </div>
+                <div class="info-rect-card">
+                    <div class="info-number">٢</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">تَعْمَلُ بِاسْتِخْدَادِمِ الْمَجَالِ الْمَغْنَاطِيسِيِّ لِلْأَرْضِ، فَالْإِبْرَةُ تُشِيرُ دَائِمًا إِلَى الشَّمَالِ الْحَقِيقِيِّ، وَتُسَاعِدُ الْبَشَرَ عَلَى مَعْرِفَةِ الِاتِّجَاهَاتِ بِدِقَّةٍ، حَتَّى فِي الْأَمَاكِنِ الْبَعِيدَةِ عَنِ الْمَعَالِمِ.</p>
+                </div>
+                <div class="info-rect-card">
+                    <div class="info-number">٣</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">يَضُمُّ ٢٢ دَوْلَةً مُوَزَّعَةً عَلَى قَارَّتَيْنِ: ١٣ دَوْلَةً فِي آسِيَا مِثْلَ السُّعُودِيَّةِ، وَالْعِرَاقِ، وَالْأُرْدُنِّ، وَالْكُوَيْتِ، وَالْإِمَارَاتِ، وَ٩ دُوَلٍ فِي إِفْرِيقِيَا مِثْلَ مِصْرَ، وَالْمَغْرِبِ، وَالْجَزَائِرِ، وَالسُّودَانِ، وَتُونِسَ. كُلُّ دَوْلَةٍ لَهَا ثَقَافَتُهَا وَعَادَاتُهَا الْمُمَيَّزَةُ، بَيْنَمَا يَجْمَعُهَا اللُّغَةُ الْعَرَبِيَّةُ كَلُغَةٍ أَسَاسِيَّةٍ وَالدِّينُ الْإِسْلَامِيُّ فِي أَغْلَبِهَا.</p>
+                </div>
+                <div class="info-rect-card">
+                    <div class="info-number">٤</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">الْعَالَمُ مُقَسَّمٌ إِلَى سَبْعِ قَارَّاتٍ: آسِيَا، إِفْرِيقِيَا، أُورُوبَّا، أَمْرِيكَا الشِّمَالِيَّةِ، أَمْرِيكَا الْجَنُوبِيَّةِ، أُسْتُرَالِيَا، وَأَنْتَارْكْتِيكَا. كُلُّ قَارَّةٍ لَهَا مَسَاحَةٌ مُخْتَلِفَةٌ وَعَدَدُ سُكَّانِهَا مُخْتَلِفٌ، وَتَحْتَوِي عَلَى ثَقَافَاتٍ مُتَنَوِّعَةٍ وَحَيَوَانَاتٍ وَنَبَاتَاتٍ مُميَّزَةٍ.</p>
+                </div>
+                <div class="flex flex-row justify-between pt-6 gap-2">
+                    <button onclick="showPage('religion-page')" class="flex-1 bg-emerald-50 text-emerald-700 py-3 rounded-xl font-bold text-sm">➡️ السابق</button>
+                    <button onclick="showPage('nature-page')" class="flex-1 bg-emerald-500 text-white py-3 rounded-xl font-bold shadow-md text-sm">التالي ⬅️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- القسم العلمي والطبيعة -->
+    <div id="nature-page" class="page-content page-container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-[30px] shadow-lg overflow-hidden border-2 border-rose-200 content-box">
+            <div class="bg-rose-100 p-6 text-rose-800 text-center">
+                <div class="text-5xl mb-2">🔬</div>
+                <h2 class="text-xl font-black">مَعْلُومَاتٌ عِلْمِيَّةٌ</h2>
+            </div>
+            <div class="p-5 md:p-8 space-y-4">
+                <div class="info-rect-card">
+                    <div class="info-number">١</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">تَعَلُّمُ أَشْيَاءَ جَدِيدَةٍ يَجْعَلُ الدِّمَاغَ يُنْشِئُ وَصَلَاتٍ عَصَبِيَّةً جَدِيدَةً بَيْنَ الْخَلَايَا، وَهٰذَا يُحَسِّنُ الذَّاكِرَةَ، وَالتَّرْكِيزَ، وَيُقَوِّي قُدُرَاتِ التَّفْكِيرِ لَدَيْنَا.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٢</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">الْعِظَامُ صُلْبَةٌ وَقَوِيَّةٌ لِأَنَّهَا تَحْتَوِي عَلَى الْكَالْسِيُومِ وَالْمَعَادِنِ، وَتَتَحَمَّلُ وَزْنَ الْجِسْمِ كُلَّهُ، وَيُمْكِنُ تَقْوِيَتُهَا بِالرِّيَاضَةِ وَالتَّغْذِيَةِ الصِّحِّيَّةِ مِثْلَ الْحَلِيبِ وَالْخُضَارِ.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٣</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">الْقَلْبُ عَضَلَةٌ لَا إِرَادِيَّةٌ، تَعْمَلُ بِاسْتِمْرَارٍ لِضَخِّ الدَّمِ الَّذِي يَحْمِلُ الْأُكْسُجِينَ وَالْغِذَاءَ لِكُلِّ الْجِسْمِ، وَيَسْتَمِرُّ فِي الْعَمَلِ دُونَ أَنْ نُفَكِّرَ فِيهِ، وَهُوَ أَسَاسِيٌّ لِلْحَيَاةِ.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٤</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">النَّبَاتَاتُ تَعْتَمِدُ عَلَى الْحَشَرَاتِ وَالطُّيُورِ لِتَلْقِيحِ الْأَزْهَارِ، وَإِذَا اخْتَفَتِ النَّبَاتَاتُ يَتَأَثَّرُ التَّوَازُنُ الْبِيئِيُّ بِالْكَامِلِ، لِأَنَّ كُلَّ الْكَائِنَاتِ الْحَيَّةِ تَحْتَاجُهَا لِلْبَقَاءِ عَلَى قَيْدِ الْحَيَاةِ.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٥</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">الْمَشْيُ نَشَاطٌ بَدَنِيٌّ مُهِمٌّ وَهُوَ نَوْعٌ مِنَ الرِّيَاضَةِ، يُقَوِّي الْعَضَلَاتِ وَالْعِظَامَ، يُنَشِّطُ الْقَلْبَ وَالرِّئَتَيْنِ، وَيُقَلِّلُ التَّوَتُّرَ، وَيُسْتَحْسَنُ الْمَشْيُ يَوْمِيًّا لِمُدَّةِ ٢٠–٣٠ دَقِيقَةً عَلَى الْأَقَلِّ لِلْحِفَاظِ عَلَى صِحَّةٍ جَيِّدَةٍ.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٦</div>
+                    <div class="flex-1">
+                        <p class="text-base md:text-lg text-gray-700 font-bold mb-3">الدِّمَاغُ مُقَسَّمٌ لِأَجْزَاءٍ تَعْمَلُ مَعًا:</p>
+                        <ul class="text-base md:text-lg text-gray-700 font-bold space-y-2 mr-4">
+                            <li>1- الْمُخُّ: يُسَاعِدُنَا عَلَى التَّفْكِيرِ، وَالتَّعَلُّمِ، وَحَلِّ الْمُشْكِلَاتِ.</li>
+                            <li>2- الْمُخَيَّخُ: يُنَظِّمُ الْحَرَكَةَ وَالتَّوَازُنَ، مِثْلَ الْمَشْيِ وَالْجَرْيِ.</li>
+                            <li>3- جُزْءٌ فِي الْأَسْفَلِ (جِذْعُ الدِّمَاغِ): يَتَحَكَّمُ فِي التَّنَفُّسِ وَنَبْضِ الْقَلْبِ دُونَ أَنْ نُفَكِّرَ فِيهَا.</li>
+                        </ul>
+                        <p class="text-base md:text-lg text-gray-700 font-bold mt-3">كُلُّ جُزْءٍ مُهِمٌّ لِيَبْقَى الْجِسْمُ يَعْمَلُ بِشَكْلٍ طَبِيعِيٍّ.</p>
+                    </div>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٧</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">الزِّرَاعَةُ الْمَائِيَّةُ هِيَ نِظَامٌ حَدِيثٌ لِزِرَاعَةِ النَّبَاتَاتِ بِدُونِ تُرْبَةٍ، حَيْثُ تَحْصُلُ النَّبَاتَاتُ عَلَى الْمَاءَ وَالْغِذَاءَ مُبَاشَرَةً، وَتُوَفِّرُ هٰذِهِ الطَّرِيقَةُ الْمَاءَ وَتَحْمِي الْبِيئَةَ، وَتُسْتَخْدَمُ فِي الْأَمَاكِنِ الَّتِي تَقِلُّ فِيهَا الْأَرَاضِي الصَّالِحَةُ لِلزِّرَاعَةِ.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٨</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">السُّلَحْفَاةُ هِيَ زَاحِفٌ بَطِيءُ الْحَرَكَةِ، لَهَا صَدَفَةٌ صُلْبَةٌ تَحْمِيهَا مِنَ الْمَخَاطِرِ، وَتَعِيشُ بَعْضُ السُّلَاحِفِ عَلَى الْيَابِسَةِ وَبَعْضُهَا فِي الْمَاءِ، وَبَعْضُهَا يَعِيشُ مِئَاتِ السِّنِينَ.</p>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">٩</div>
+                    <div class="flex-1">
+                        <p class="text-base md:text-lg text-gray-700 font-bold mb-3">الْبُذُورُ هِيَ بِدَايَةُ حَيَاةِ النَّبَاتِ، وَلِكُلِّ نَوْعٍ بُذُورٌ خَاصَّةٌ بِهِ: بُذُورُ الْخُضَارِ وَالْفَوَاكِهِ وَالنَّبَاتَاتِ الزَّهْرِيَّةِ. لِتَنْـمُوَ الْبُذُورُ تَحْتَاجُ إِلَى:</p>
+                        <div class="space-y-2 mr-4 text-base md:text-lg text-gray-700 font-bold">
+                            <p>١. الْمَاءِ لِإِيقَاظِ الْجَنِينِ دَاخِلَ الْبُذْرَةِ.</p>
+                            <p>٢. الْهَوَاءِ (الْأُكْسُجِينِ) لِمُسَاعَدَتِهَا عَلَى التَّنَفُّسِ.</p>
+                            <p>3. الشَّمْسِ لِلطَّاقَةِ بَعْدَ خُرُوجِ النَّبَاتِ الصَّغِيرِ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-rect-card">
+                    <div class="info-number">١٠</div>
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-bold text-justify-custom">طَرِيقَةُ الزِّرَاعَةِ تَخْتَلِفُ حَسَبَ نَوْعِ الْبُذْرَةِ: بَعْضُ الْبُذُورِ تُزْرَعُ عَمِيقًا فِي التُّرْبَةِ، وَبَعْضُهَا تُزْرَعُ قَرِيبَ السَّطْحِ.</p>
+                </div>
+
+                <div class="flex flex-row justify-between pt-6 gap-2">
+                    <button onclick="showPage('geo-page')" class="flex-1 bg-rose-50 text-rose-700 py-3 rounded-xl font-bold text-sm">➡️ السابق</button>
+                    <button onclick="showPage('home-page')" class="flex-1 bg-emerald-600 text-white py-3 rounded-xl font-bold shadow-md text-sm">تمت الجولة ✅</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-12 text-center text-emerald-800/40 font-bold py-6">
+        <p class="text-[10px] tracking-[0.2em] uppercase px-4">مدرسة الطور الابتدائية للبنين ب - ٢٠٢٦ ©</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('page-active'));
+            document.getElementById(pageId).classList.add('page-active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
